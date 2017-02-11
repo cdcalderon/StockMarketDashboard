@@ -1,0 +1,46 @@
+<nav class="navbar az-navbar">
+    <a class="navbar-brand" routerLink="/pages/dashboard">
+        <img src="../assets/img/logo/az_logo_full.png" alt="" class="hidden-sm-down"> 
+        <img src="../assets/img/logo/az_logo.png" alt="" class="hidden-md-up"> 
+    </a>
+
+    <ul class="nav navbar-nav">
+        <li>
+            <a (click)="toggleMenu()" class="collapse-menu-link ion-navicon" id="collapse-menu-link"></a>
+        </li>
+
+        <li class="hidden-sm-down">
+            <form role="search" class="app-search">
+                <input type="text" placeholder="Search..." class="form-control">
+                <a href="javascript:void(0)"><i class="ion-ios-search-strong"></i></a>
+            </form>
+        </li>
+
+        <div class="pull-right">
+            
+            <messages></messages>
+                            
+            <div class="dropdown pull-right user-menu">
+                <a class="dropdown-toggle user-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                    <img src="../assets/img/users/user.jpg" alt="user-img" class="img-circle user-img">
+                    <span class="hidden-md-down">Emilio Verdines</span>
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li class="user-info">
+                        <img src="../assets/img/users/user.jpg" alt="user-img" class="img-circle user-img">                    
+                        <p>
+                            Emilio Verdines - Web Developer
+                            <small>Member since Dec. 2015</small>
+                        </p>
+                    </li>
+                    <a class="dropdown-item" routerLink="profile"><i class="fa fa-user"></i>Profile</a>
+                    <a class="dropdown-item" routerLink="settings"><i class="fa fa-cog"></i>Settings</a>
+                    <a class="dropdown-item" routerLink="/"><i class="fa fa-lock"></i>Lock screen</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" routerLink="/login"><i class="fa fa-power-off"></i>Log out</a>
+                </ul>
+            </div>
+        </div>         
+    </ul>
+</nav>
