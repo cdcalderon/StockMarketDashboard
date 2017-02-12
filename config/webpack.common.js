@@ -22,6 +22,11 @@ module.exports = {
     },
 
     resolve:{
+        alias: {
+        // NOTE: You should set 'highcharts/highcharts.src.js'
+        // if you are not going to use <chart type="StockChart"
+        highcharts$: "highcharts/highstock.src.js"
+      },
         extensions: ['.js', '.ts', '.css', '.scss', '.json'],
 		modules: [helpers.root('src'), 'node_modules']
     },

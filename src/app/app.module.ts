@@ -3,6 +3,8 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { ChartModule } from 'angular2-highcharts';
+
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { FroalaEditorModule } from "ng2-froala-editor/ng2-froala-editor"; 
 import { CKEditorModule } from 'ng2-ckeditor';
@@ -123,7 +125,8 @@ import { GapsComponent } from './pages/gaps/gaps.component'
     DataTableModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDe_oVpi9eRSN99G4o6TwVjJbFBNr58NxE'
-    })
+    }),
+    ChartModule
   ],
   declarations: [
     AppComponent,
