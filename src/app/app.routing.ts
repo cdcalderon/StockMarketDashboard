@@ -54,6 +54,7 @@ import { WizardComponent } from './pages/form-elements/wizard/wizard.component';
 
 //My Components
 import { GapsComponent } from './pages/gaps/gaps.component';
+import { StockEarningComponent } from './pages/stock-earnings/stock.earnings.component';
 
 const appRoutes: Routes = [ 
   {
@@ -87,6 +88,13 @@ const appRoutes: Routes = [
        component: GapsComponent,
        data:{
          title: 'Gaps'
+       }
+      },
+      {
+       path: 'stock-earnings',
+       component: StockEarningComponent,
+       data:{
+         title: 'Stock Earnings'
        }
       },
       {

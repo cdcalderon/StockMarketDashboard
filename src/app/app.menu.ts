@@ -16,6 +16,14 @@ export const menuItems = [
     order: 100
   },
   {
+    title: 'Stock Earnings',
+    routerLink: 'stock-earnings',
+    icon: 'ion-android-home',
+    selected: false,
+    expanded: false,
+    order: 150
+  },
+  {
     title: 'Charts',
     routerLink: 'charts',
     icon: 'ion-stats-bars',

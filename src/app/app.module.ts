@@ -109,8 +109,8 @@ import {SearchPipe} from './theme/pipes/search/search.pipe';
 import {MailSearchPipe} from './theme/pipes/search/mail-search.pipe';
 
 //MyComponents
-import { GapsComponent } from './pages/gaps/gaps.component'
-
+import { GapsComponent } from './pages/gaps/gaps.component';
+import { StockEarningComponent } from './pages/stock-earnings/stock.earnings.component';
 
 @NgModule({
   imports: [
@@ -187,7 +187,8 @@ import { GapsComponent } from './pages/gaps/gaps.component'
     AppPicturePipe,
     SearchPipe,
     MailSearchPipe,
-    GapsComponent
+    GapsComponent,
+    StockEarningComponent
   ],  
   providers: [
     Title,
