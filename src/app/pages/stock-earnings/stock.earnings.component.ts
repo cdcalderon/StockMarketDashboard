@@ -16,8 +16,20 @@ export class StockEarningComponent implements OnInit {
   ngOnInit(): void {
     this._stockEarningsService.getStockEarnings()
         .subscribe(
-          stockEarnings => this.stockEarnings = stockEarnings,
+          stockEarnings => {
+            this.stockEarnings = stockEarnings;
+
+            console.log("This is stockearnings after all");
+            console.log(this.stockEarnings);
+
+          },
           error => this.errorMessage = <any>error
-        )
+        );
+
+
+
+
+    //var gaps.this._stockEarningsService.getGaps();
   }
+
 }

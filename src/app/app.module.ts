@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ChartModule } from 'angular2-highcharts';
@@ -126,7 +126,8 @@ import { StockEarningComponent } from './pages/stock-earnings/stock.earnings.com
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDe_oVpi9eRSN99G4o6TwVjJbFBNr58NxE'
     }),
-    ChartModule
+    ChartModule,
+    JsonpModule
   ],
   declarations: [
     AppComponent,
