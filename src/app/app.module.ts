@@ -106,6 +106,7 @@ import {DropzoneUpload} from './theme/directives/dropzone/dropzone.directive';
 import {ProfilePicturePipe} from './theme/pipes/profilePicture/profilePicture.pipe';
 import {AppPicturePipe} from './theme/pipes/appPicture/appPicture.pipe';
 import {SearchPipe} from './theme/pipes/search/search.pipe';
+import {SearchStockEarningPipe} from  './theme/pipes/search/search.stockearnings.pipe';
 import {MailSearchPipe} from './theme/pipes/search/mail-search.pipe';
 
 //MyComponents
@@ -188,6 +189,7 @@ import { StockEarningComponent } from './pages/stock-earnings/stock.earnings.com
     AppPicturePipe,
     SearchPipe,
     MailSearchPipe,
+    SearchStockEarningPipe,
     GapsComponent,
     StockEarningComponent
   ],  
