@@ -1,10 +1,12 @@
 import { Injectable} from '@angular/core'
-import { Http, Response, Jsonp } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable'; 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import { IStockEarning } from './stockEarning';
+
+import * as _ from "lodash";
 
 @Injectable()
 export class StockEarningsService {
@@ -24,8 +26,19 @@ export class StockEarningsService {
                .catch(this.handleError);
   }
 
-  getCalendarEvents() {
-    return calendarEvents;
+  getCalendarEvents(stockEarnings: IStockEarning[]) {
+      return _(stockEarnings)
+            .groupBy(x => x.reportDateStr)
+            .map((value, key) => ({
+              date: key,
+              start: new Date(key),
+              title: `rep: ${value.length}`,
+              backgroundColor: "red",
+              textColor: "#fff",
+              description: 'Will be busy throughout the whole day',
+              earnings: value
+            }))
+            .value();
   }
 
 

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { StockEarningsService } from './stock.earnings.service';
 import { IStockEarning } from './stockEarning';
 
+
 @Component({
   selector: 'stock-earnings',
   templateUrl: './stock.earnings.component.html',
@@ -18,19 +19,19 @@ export class StockEarningComponent implements OnInit {
   constructor(private _stockEarningsService: StockEarningsService) {}
   
   ngOnInit(): void {
-    // this._stockEarningsService.getStockEarnings()
-    //     .subscribe(
-    //       stockEarnings => {
-    //         this.stockEarnings = stockEarnings;
-    //
-    //         // console.log("This is stockearnings after all");
-    //         // console.log(this.stockEarnings);
-    //
-    //       },
-    //       error => this.errorMessage = <any>error
-    //     );
+    this._stockEarningsService.getStockEarnings()
+        .subscribe(
+          stockEarnings => {
+            this.stockEarnings = stockEarnings;
 
-    this.calendarEvents = this._stockEarningsService.getCalendarEvents();
+            // console.log("This is stockearnings after all");
+            // console.log(this.stockEarnings);
+            this.calendarEvents = this._stockEarningsService.getCalendarEvents(this.stockEarnings);
+          },
+          error => this.errorMessage = <any>error
+        );
+
+
 
     console.log("ngOnInit - StockEarningComponent ");
     console.log(this.calendarEvents);
