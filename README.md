@@ -1,3 +1,3 @@
-# Azimuth
+# The Stock Market Platform.....
 
 ----------------
