@@ -1,6 +1,7 @@
-import { Component, ViewEncapsulation, Input } from '@angular/core';
+import {Component, ViewEncapsulation, Input, Output, EventEmitter} from '@angular/core';
 import { AppConfig } from "../../app.config";
 import './calendar.loader.ts';
+import {IStockEarning} from "../stock-earnings/stockEarning";
 
 @Component({
   selector: 'calendar',
@@ -19,6 +20,10 @@ export class CalendarComponent {
     createEvent: any;
 
     @Input() calendarEvents:any;
+    @Output() calendarEarningClicked: EventEmitter<IStockEarning[]> =
+                  new EventEmitter<IStockEarning[]>();
+
+
 
     constructor(private _appConfig:AppConfig) {
         // this.config = this._appConfig.config;
@@ -295,6 +300,8 @@ export class CalendarComponent {
             },
             eventClick: (event): void => {
                 this.event = event;
+                console.log('sent earnings ', event.earnings);
+                this.calendarEarningClicked.emit(<IStockEarning[]> event.earnings);
                 jQuery('#show-event-modal').modal('show');
             },
             editable: true,

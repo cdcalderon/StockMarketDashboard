@@ -4,7 +4,7 @@
     <!--{{earning.symbol}}-->
 <!--</div>-->
 
-<div class="row">
+<div class="row" >
     <div class="col-xs-12">
         <div widget class="card">
             <div class="card-header">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="table-responsive datatable">
-                    <table class="table table-striped table-hover table-sm" [mfData]="stockEarnings  | SearchStockEarningPipe : searchText" #mf="mfDataTable" [mfRowsOnPage]="10">
+                    <table  class="table table-striped table-hover table-sm" [mfData]="stockEarnings  | SearchStockEarningPipe : searchText" #mf="mfDataTable" [mfRowsOnPage]="10">
                         <thead>
                         <tr>
                             <th><mfDefaultSorter by="symbol">Symbol</mfDefaultSorter></th>
@@ -61,6 +61,6 @@
     </div>
 </div>
 
-<calendar *ngIf="calendarEvents && calendarEvents.length > 0" [calendarEvents]="calendarEvents"></calendar>
+<calendar (calendarEarningClicked)='onCalendarEventClicked($event)' *ngIf="calendarEvents && calendarEvents.length > 0" [calendarEvents]="calendarEvents"></calendar>
 
 
