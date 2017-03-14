@@ -55,6 +55,7 @@ import { WizardComponent } from './pages/form-elements/wizard/wizard.component';
 //My Components
 import { GapsComponent } from './pages/gaps/gaps.component';
 import { StockEarningComponent } from './pages/stock-earnings/stock.earnings.component';
+import { StockQuoteComponent } from './pages/stock-quotes/stock.quote.component';
 
 const appRoutes: Routes = [ 
   {
@@ -96,6 +97,13 @@ const appRoutes: Routes = [
        data:{
          title: 'Stock Earnings'
        }
+      },
+      {
+        path: 'stockquote/:id',
+        component: StockQuoteComponent,
+        data:{
+          title: 'Stock Quote'
+        }
       },
       {
        path: 'ng2charts',

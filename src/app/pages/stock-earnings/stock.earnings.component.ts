@@ -28,8 +28,6 @@ export class StockEarningComponent implements OnInit {
           error => this.errorMessage = <any>error
         );
 
-
-
     console.log("ngOnInit - StockEarningComponent ");
     console.log(this.calendarEvents);
 

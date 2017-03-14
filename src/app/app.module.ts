@@ -112,6 +112,8 @@ import {MailSearchPipe} from './theme/pipes/search/mail-search.pipe';
 //MyComponents
 import { GapsComponent } from './pages/gaps/gaps.component';
 import { StockEarningComponent } from './pages/stock-earnings/stock.earnings.component';
+import { } from './pages/stock-quotes/stock.quote.component';
+import {StockQuoteComponent} from "./pages/stock-quotes/stock.quote.component";
 
 @NgModule({
   imports: [
@@ -191,7 +193,9 @@ import { StockEarningComponent } from './pages/stock-earnings/stock.earnings.com
     MailSearchPipe,
     SearchStockEarningPipe,
     GapsComponent,
-    StockEarningComponent
+    StockEarningComponent,
+    StockQuoteComponent
+
   ],  
   providers: [
     Title,
