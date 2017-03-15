@@ -8,21 +8,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class StockQuoteComponent {
 
     pageTitle: string = 'Stock Quote';
+    widget1: string = `<iframe width="600" noresize="noresize" 
+                               scrolling="no" height="500" frameborder="0" 
+                               src="https://widgets.tc2000.com/WidgetServer.ashx?id=44928">                            
+                       </iframe>`;
 
-    constructor(private _route: ActivatedRoute,
-                private _router: Router) {
+    constructor(private _route: ActivatedRoute) {
     }
 
     ngOnInit(): void {
         let id = this._route.snapshot.params['id'];
         this.pageTitle += `: ${id}`;
 
-
-        setTimeout(() => {
-            jQuery('#wordenChart').attr("src","ChartImageHandler.ashx?service=TCTEMPLATEWIDGET&sym=AMZN&TF=1DAY&w=600&h=299&bars=29&widgetID=44919&ID=4790593&nocache=Tue Mar 14 2017 00:04:49 GMT-0500 (CDT)");
-        jQuery('h2').text("nannnd");
-        }, 14000);
-
+        jQuery( "#widget" ).append( this.widget1 );
     }
 
 
