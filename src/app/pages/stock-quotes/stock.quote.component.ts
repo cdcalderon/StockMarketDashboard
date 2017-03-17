@@ -8,14 +8,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class StockQuoteComponent {
 
     pageTitle: string = 'Stock Quote';
-    widget1: string = `<iframe width="600" noresize="noresize" 
-                               scrolling="no" height="500" frameborder="0" 
-                               src="https://widgets.tc2000.com/WidgetServer.ashx?id=44928">                            
+    widget1: string = `<iframe width="600" noresize="noresize" scrolling="no" 
+                               height="500" frameborder="0" 
+                               src="https://widgets.tc2000.com/WidgetServer.ashx?id=45520">
                        </iframe>`;
+
     widget2: string = `<iframe width="600" noresize="noresize" 
                                scrolling="no" height="500" frameborder="0"
-                               src="https://widgets.tc2000.com/WidgetServer.ashx?id=45509">
-                               
+                               src="https://widgets.tc2000.com/WidgetServer.ashx?id=45509">                            
                        </iframe>`;
 
     constructor(private _route: ActivatedRoute) {
@@ -28,7 +28,5 @@ export class StockQuoteComponent {
         jQuery( "#widget1" ).append( this.widget1 );
         jQuery( "#widget2" ).append( this.widget2 );
     }
-
-
 
 }
