@@ -23,17 +23,17 @@ export class StockEarningComponent implements OnInit {
         .subscribe(
           stockEarnings => {
             this.stockEarnings = stockEarnings;
-            this.calendarEvents = this._stockEarningsService.getCalendarEvents(this.stockEarnings);
+            this.calendarEvents =
+                this._stockEarningsService.getCalendarEvents(this.stockEarnings);
           },
           error => this.errorMessage = <any>error
         );
 
     console.log("ngOnInit - StockEarningComponent ");
     console.log(this.calendarEvents);
-
   }
 
-    onCalendarEventClicked(earnings: IStockEarning[]) {
+  onCalendarEventClicked(earnings: IStockEarning[]) {
       console.log('received earnings from calendar', earnings);
       this.stockEarnings = earnings;
   }

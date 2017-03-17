@@ -14,6 +14,7 @@ export class GapService {
       "distanceValue": 7.0
     }
   ];
-
   }
+
 }
+
