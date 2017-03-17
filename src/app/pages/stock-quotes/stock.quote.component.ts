@@ -12,6 +12,11 @@ export class StockQuoteComponent {
                                scrolling="no" height="500" frameborder="0" 
                                src="https://widgets.tc2000.com/WidgetServer.ashx?id=44928">                            
                        </iframe>`;
+    widget2: string = `<iframe width="600" noresize="noresize" 
+                               scrolling="no" height="500" frameborder="0"
+                               src="https://widgets.tc2000.com/WidgetServer.ashx?id=45509">
+                               
+                       </iframe>`;
 
     constructor(private _route: ActivatedRoute) {
     }
@@ -20,7 +25,8 @@ export class StockQuoteComponent {
         let id = this._route.snapshot.params['id'];
         this.pageTitle += `: ${id}`;
 
-        jQuery( "#widget" ).append( this.widget1 );
+        jQuery( "#widget1" ).append( this.widget1 );
+        jQuery( "#widget2" ).append( this.widget2 );
     }
 
 
